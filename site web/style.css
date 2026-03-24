@@ -1,0 +1,29 @@
+* { margin: 0; box-sizing: border-box; }
+body { background: #0a0a0a; color: #f5f2ec; font-family: Jaro, sans-serif; }
+
+header { display: flex; justify-content: space-between; align-items: center; padding: 36px 80px; font-size: 28px; }
+nav a { color: #f5f2ec; text-decoration: none; margin-left: 32px; }
+.deals { color: #c9a96e; }
+
+
+.layout { display: flex; gap: 0; padding: 40px 80px; }
+.sidebar { width: 240px; flex-shrink: 0; padding-right: 40px; }
+.filter-label { font-size: 14px; color: #f5f2ec; padding: 10px 0; border-bottom: 1px solid #333; display: flex; justify-content: space-between; }
+.sort-open { font-size: 14px; color: #f5f2ec; padding: 8px 0; border-bottom: 1px solid #333; }
+.sort-open p { margin-bottom: 8px; }
+.sort-option { display: flex; align-items: center; gap: 8px; padding: 4px 0 4px 8px; font-size: 13px; color: #f5f2ec; }
+.dot { width: 12px; height: 12px; border-radius: 50%; border: 1px solid #f5f2ec; flex-shrink: 0; }
+
+/* Ce que j'ai essayé de faire : afficher les produits en 3 colonnes égales côte à côte.
+   Prompt IA : "Comment faire une grille de 3 colonnes égales qui s'étire pour remplir tout l'espace disponible ?"
+   Résultat IA : display:grid avec grid-template-columns: repeat(3, 1fr) pour 3 colonnes égales, et flex:1 pour occuper tout l'espace restant à droite de la sidebar. */
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; flex: 1; }
+
+/* Ce que j'ai essayé de faire : donner un effet de lumière autour de chaque carte comme dans le design Figma.
+   Prompt IA : "Comment faire un halo lumineux autour d'une carte en CSS ?"
+   Résultat IA : box-shadow: 0 0 16px #f0eded, ce qui crée une lueur diffuse blanche autour de la carte sans décalage. */
+.card { background: #8a8a8a; border-radius: 4px; box-shadow: 0 0 16px #f0eded; padding: 16px; }
+.card img { width: 100%; height: 180px; object-fit: cover; border-radius: 2px; }
+.card-name { font-size: 16px; color: #252525; margin-top: 8px; }
+.card-brand, .card-gender { font-size: 13px; color: #252525; }
+.card-price { color: #c9a96e; font-weight: 600; text-align: right; margin-top: 6px; }
